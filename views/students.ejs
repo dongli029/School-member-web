@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Students' page</title>
+  </head>
+  <body>
+    <h1>Students' page</h1>
+    <ul>
+      <!-- 在首頁的每個學生姓名建立routing, 按下可以連接到學生個人頁面-->
+      <% studentData.forEach((student)=>{ %>
+      <li><a href="/students/<%= student._id %>"><%= student.name%></a></li>
+      <% }) %>
+    </ul>
+    <button><a href="/students/new">Add New Student</a></button>
+    <button><a href="/faculties">XXX School!!</a></button>
+    <!-- <script src="./app.js></script> -->
+  </body>
+</html>

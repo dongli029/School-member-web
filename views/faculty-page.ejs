@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= facultyName.name%>的頁面</title>
+    <!-- 設定CSS -->
+    <style>
+      table,
+      tr,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>ID</td>
+        <td><%= facultyName._id %></td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td><%= facultyName.name %></td>
+      </tr>
+      <tr>
+        <td>Age</td>
+        <td><%= facultyName.age %></td>
+      </tr>
+      <tr>
+        <td>Suject</td>
+        <td><%= facultyName.suject %></td>
+      </tr>
+    </table>
+    <button><a href="/faculties">faculty page</a></button>
+    <button><a href="/faculties/<%= facultyName._id %>/edit">Edit</a></button>
+    <button>
+      <a href="/faculties/<%= facultyName._id %>/delete">Delete</a>
+    </button>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete student</title>
+  </head>
+  <body>
+    <!-- action="/students代表要新增到method="post"的/students路徑 -->
+    <form
+      action="/students/<%= foundStudent._id %>?_method=Delete"
+      method="post"
+    >
+      <label for="name">Name</label>
+      <input type="text" name="name" value="<%= foundStudent.name %>" />
+      <label for="age">Age</label>
+      <input type="number" name="age" value="<%= foundStudent.age %>" />
+      <label for="merit">Merit scholarship</label>
+      <input
+        type="number"
+        name="merit"
+        value="<%= foundStudent.scholarship.merit %>"
+      />
+      <label for="other"> Other scholarship </label>
+      <input
+        type="number"
+        name="other"
+        value="<%= foundStudent.scholarship.other %>"
+      />
+      <label for="major">Major </label>
+      <input type="text" name="major" value="<%= foundStudent.major %>" />
+      <button>delete data</button>
+      <a href="/students/<%= foundStudent._id %>">Cancel</a>
+    </form>
+  </body>
+</html>

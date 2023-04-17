@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add new student</title>
+    <style>
+      table,
+      tr,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- action="/students代表要新增到method="post"的/students路徑 -->
+    <form action="/students" method="post">
+      <label for="name">Name</label>
+      <input type="text" name="name" />
+      <label for="age">Age</label>
+      <input type="number" name="age" />
+      <label for="merit">Merit scholarship</label>
+      <input type="number" name="merit" />
+      <label for="other">Other scholarship </label>
+      <input type="number" name="other" />
+      <label for="major">Major </label>
+      <input type="text" name="major" />
+      <button>Add</button>
+      <a href="/students">Cancel</a>
+    </form>
+  </body>
+</html>
